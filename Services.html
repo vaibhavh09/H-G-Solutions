@@ -1,0 +1,369 @@
+<!---Log-in-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+            /* font-family: 'Josefin Sans', sans-serif; */
+            font-family: 'Poppins', sans-serif;
+            max-height: 100vh;
+            background-color: #1F252E;
+        }
+
+        /*nav */
+        header {
+            padding: 1.7rem 1rem;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            max-width: 80%;
+            margin: auto;
+            align-items: center;
+            background-color: transparent;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 800;
+        }
+
+        .logo a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .skillsA {
+            font-size: 1.3rem;
+            font-weight: 800;
+        }
+
+        .SkillsA a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .list {
+            color: orangered;
+        }
+
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: .97rem;
+            font-weight: 600;
+            letter-spacing: .7px;
+            padding: 1rem;
+            padding: 0.4rem 1rem;
+        }
+
+        nav a.active,
+        nav a:hover {
+            color: #00E8F8;
+            border-radius: 1rem;
+            transition: all.3s ease-in-out;
+        }
+
+        #click {
+            display: none;
+        }
+
+        .menu i {
+            color: #00E8F8;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        /* Nav */
+
+        section {
+            margin: 2rem 8.5rem;
+            ;
+        }
+
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin: 5rem auto;
+        }
+
+        .main h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #fff;
+            /* animation: check 1s ease forwards;
+            animation-delay: .1s; */
+        }
+
+        .main p {
+            margin-top: 1rem;
+            font-size: .98rem;
+            color: #fff;
+        }
+
+        .social {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.4rem;
+            margin-top: 1.7rem;
+        }
+
+        .social a {
+            color: #00E8F8;
+            font-size: 1rem;
+            border: 1.6px solid #00E8F8;
+            border-radius: 50%;
+            padding: .35rem;
+            text-align: center;
+            width: 26px;
+        }
+
+        .social a:hover {
+            color: #1F252E;
+            background-color: #00E8F8;
+            box-shadow: 0 0 20px #00E8F8;
+            transition: all .3s ease-in-out;
+        }
+
+        .main h1 span:nth-child(1) {
+            font-size: 1.5rem;
+        }
+
+        .main h1 span:nth-child(2) {
+            color: #00E8F8;
+        }
+
+        .images {
+            background-image: url(/img/graph5.png);
+            background-repeat: no-repeat;
+            background-position: 0 -75px;
+            -webkit-box-shadow: 0 10px 10px -10px #000000;
+            -moz-box-shadow: 0 10px 10px -10px #000000;
+            box-shadow: 0px 16px 4px -10px #00E8F8;
+            width: 528px;
+            background-size: cover;
+        }
+
+        /* @keyframes check {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        } */
+
+        @media only screen and (max-width:480px) {
+            .menu {
+                display: block;
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: #244D61;
+            }
+
+            header {
+                padding: 0.7rem 1rem;
+                align-items: center;
+                max-width: 100%;
+            }
+
+            nav {
+                position: absolute;
+                display: grid;
+                top: 75px;
+                text-align: center;
+                background-color: #1F252E;
+                left: -100%;
+                z-index: 1;
+                width: 100%;
+            }
+
+            #click:checked~nav {
+                left: 0%;
+                transition: all 0.3s ease;
+            }
+
+            section {
+                margin: 1rem 1.5rem;
+            }
+
+        }
+* {
+  box-sizing:border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  padding: 64px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+}
+
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding: 20px;
+}
+
+.large-font {
+  font-size: 48px;
+}
+
+.xlarge-font {
+  font-size: 64px
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #04AA6D;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .column-66,
+  .column-33 {
+    width: 100%;
+    text-align: center;
+  }
+  img {
+    margin: auto;
+  }
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    
+    font-weight: 300;
+    margin-top: 20px;
+}
+.footer {
+   
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   text-align: center;
+}
+</style>
+</head>
+<body>
+
+<header>
+        <div class="logo">
+           <p style="color: white;"><img src="logo.jpg" alt="Description of the image" height="20px" width="30px">H&G Solution.</p>
+        </div>
+        <input type="checkbox" id="click">
+        <label for="click" class="mainicon">
+            <div class="menu">
+                <i class="bi bi-list"></i>
+            </div>
+        </label>
+        <nav>
+            <a href="index.html" >Home</a>
+             <a href="Projects.html">Projects</a>
+            <a href="Services.html"class="active">Services</a>
+            <a href="About.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="#">Portfolio</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+    </header>
+
+<section> <h1 style="color:white; text-align: center; font-size:45px;">Our Services</h1></section>
+<!-- The App Section -->
+<div class="container" ">
+  <div class="row">
+    <div class="column-66">
+      <h1 class="xlarge-font" style="color:mediumseagreen;"><b>Website Developement</b></h1>
+      <p style="color:white;"><span style="font-size:24px">"Transform your digital presence with our expert website development services. We specialize in crafting responsive, visually appealing websites tailored to your unique needs. From dynamic web applications to sleek corporate sites, our team ensures a seamless blend of creativity and functionality, delivering an unparalleled user experience."</p>
+      <br>
+      <button class="button">See Previous Work</button>
+    </div>
+    <div class="column-33">
+        <img src="w.jpg" width="335" height="471">
+    </div>
+  </div>
+</div>
+
+<!-- Clarity Section -->
+<div class="container">
+  <div class="row">
+    <div class="column-33">
+      <img src="s.png" alt="App" width="335" height="471">
+    </div>
+    <div class="column-66">
+      <h1 class="xlarge-font" style="color:mediumseagreen;"><b>Software Development</b></h1>
+     <br>
+      <p style="color:white;"><span style="font-size:24px">"Empower your business with our comprehensive software development services. We specialize in crafting tailored solutions that drive innovation, enhance efficiency, and deliver seamless user experiences. From custom application development to scalable software solutions, our expert team is dedicated to transforming your ideas into robust, cutting-edge software solutions."</p>
+      <br>
+      <button class="button" style="background-color:mediumseagreen;">See Previous Work</button>
+    </div>
+  </div>
+</div>
+
+<!-- The App Section -->
+<div class="container" >
+  <div class="row">
+    <div class="column-66">
+      <h1 class="xlarge-font" style="color:mediumseagreen;"><b>Application Developement</b></h1>
+     <br>
+      <p style="color:white;"><span style="font-size:24px">"Empower your business with our cutting-edge Android application development services. We specialize in creating innovative and user-friendly Android apps tailored to your unique needs. Our experienced team ensures seamless functionality, striking design, and optimal performance for a compelling mobile experience."</p>
+      <br>
+      <button class="button">See Previous Work</button>
+    </div>
+    <div class="column-33">
+        <img src="w.jpg" width="335" height="471" >
+    </div>
+  </div>
+  
+</div>
+<div class="footer">
+  <div class="copyright">
+      <p style="color:white;">Copyright @ H&G Solutions</p>
+  </div>
+</div>
+</body>
+</html>
