@@ -156,6 +156,8 @@
         } */
 
         @media only screen and (max-width:480px) {
+
+
             .menu {
                 display: block;
                 font-size: 1.5rem;
@@ -189,7 +191,9 @@
                 margin: 1rem 1.5rem;
             }
 
+
         }
+
         .copyright{
     width: 100%;
     text-align: center;
@@ -230,6 +234,16 @@
   margin-left: 10px;
   padding: 70px;
 }
+@media only screen and (max-width: 768px) {
+  .column-66,
+  .column-33 {
+    float: none;
+    width: 100%;
+    margin-top: 0;
+    margin-left: 0;
+    padding: 20px; /* Adjust padding as needed for mobile layout */
+  }
+}
 
 .large-font {
   font-size: 48px;
@@ -248,12 +262,7 @@
   background-color: #04AA6D;
 }
 
-img {
-  display: block;
-  height: auto;
-  border-radius: 50%;
-  max-width: 100%;
-}
+
 .footer {
    
    left: 0;
@@ -262,7 +271,16 @@ img {
    color: white;
    text-align: center;
 }
+.Developer{
+img {
+  display: block;
+  height: auto;
+  border-radius: 50%;
+  max-width: 100%;
+}
+}
     </style>
+
 </head>
 
 <body>
@@ -307,7 +325,9 @@ img {
      
     </div>
     <div class="column-33">
-        <img src="6.jpg" width="335" height="351">
+        <div class="Developer">
+        <img src="6.jpg">
+        </div>
     </div>
   </div>
 </div>
